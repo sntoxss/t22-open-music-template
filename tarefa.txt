@@ -1,0 +1,28 @@
+Passos
+°Monte a estrutura de diretórios seguindo o modelo mais abaixo, adequando cada arquivo em seu local respectivo;  \/
+
+°Faça a exportação dos arquivos <svg> dos ícones utilizados através do Figma (sun-icon.svg e moon-icon.svg);  \/
+
+°Faça a exportação dos arquivos de imagem das capas de álbuns através do Figma; \/
+
+°Crie os arquivos modularizados de estilização (Dica: Para não deixar os arquivos de estilo vazios por enquanto, faça um pequeno comentário em cada um deles. Ex: /* Estilizações Globais */, /* Estilização do Cabeçalho */, etc...);  \/
+
+°Crie um arquivo de reset.css (Escolha o seu próprio reset);  \/
+
+°Crie o arquivo javascript modularizado (Dica: Para não deixar o arquivo vazio por enquanto, faça um pequeno comentário nele. Ex: /* Script Global */);  \/
+
+°Estruture completamente o HTML da página em index.html: \/
+
+°Para o filtro de intervalo de preço, utilize o input do tipo range. Não se preocupe em estilizá-lo no momento. Observe a documentação oficial sobre o input range para mais detalhes.  \/
+
+°Para as imagens de capa, utilize as 3 imagens em 6 capas (utilizando a mesma imagem apenas para montar uma estrutura inicial similar).  \/
+
+°Estruture o arquivo globalStyles.css, seguindo a página 'Style Guide' do modelo do Figma:  \/
+
+°Faça o import da fonte utilizada dentro do arquivo globalStyles.css;  \/
+
+°Declare a pseudo-classe :root e preencha seu interior com as variáveis CSS representando as cores do projeto (Dica: Você também pode adicionar outras variáveis que te ajudem no desenvolvimento se preferir).  \/
+
+°Declare um seletor <body> para definir as propriedades font-family, background-color e centralizar os conteúdos, seguindo o modelo do Figma. Utilize como tamanho máximo para os conteúdos 1024px (Dica: Utilize os conceitos de margin auto para centralizar corretamente os conteúdos); \/
+
+°Estilize o cabeçalho utilizando o arquivo header.css, seguindo o modelo do Figma. Para adicionar a imagem como fundo do botão, observe a documentação das propriedades css background-image.  \/

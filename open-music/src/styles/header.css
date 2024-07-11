@@ -1,0 +1,25 @@
+header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border-bottom: solid 3px var(--brand-2);
+  padding: 48px 0px;
+}
+header h1{
+  font-size: 40px
+}
+header h1 span{
+  font-size: inherit;
+  color: var(--brand-1)
+}
+header button{
+  height: 32px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 5px;
+}
+header button img{
+  height: 18px;
+  width: 16px;
+} 
