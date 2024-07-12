@@ -1,1 +1,46 @@
-/* estilização da faixa de preço */
+#selectorPrice__input {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  background-color: var(--brand-1);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+#selectorPrice__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 30px;
+  width: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 0.5rem solid var(--brand-1);
+}
+
+.price__container div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.price__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap:19px;
+  padding: 32px 0px;
+}
+.price-h2{
+  font-size: 24px;
+}
+.price-value{
+  font-size: 22px;
+  padding: 32px 0;
+}
+.price-value span{
+  color: var(--brand-1);
+  font-size: inherit;
+}

@@ -1,1 +1,131 @@
-/* estilos do albuns */
+.albums__container{
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.albums__container h2{
+  color: var(--gray-2);
+  font-size: 24px;
+}
+.block__album{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 19px;
+  margin-bottom: 46px;
+}
+.album__item:hover{
+  background-color: var(--gray-6);
+}
+.album__item img{
+  border-radius: 4px 4px 0 0;
+  object-fit: cover;
+  height: 149px;
+}
+.album__item{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray-7);
+  justify-content: space-between;
+  border-radius: 4px;
+  width: clamp(18.438rem, 15.587rem + 5.702vw, 19.25rem);
+  height: 308px;
+}
+.titleAlbum{
+  margin-top: 15px;
+  width: 308px;
+  padding: 5px 16px;
+  gap: 10px;
+}
+.album-banda{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4px 16px;
+}
+.album-price{
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  gap: 10px;
+  align-items: center;
+}
+.album-price div{
+  
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.album-price p{
+  color: var(--gray-2);
+  font-size: 19.2px;
+  line-height: 23.24px;
+  font-weight: 600;
+}
+
+
+.album-price button:hover{
+  background-color: var(--brand-1);
+}
+.album-price button{
+  border-radius: 4px;
+  padding: 12px 10px;
+  border: 1px solid var(--brand-2);
+  background-color:var(--brand-2);
+  color: white;
+  font-size: 1rem;
+}
+
+@media(max-width: 1028px ){
+  header{
+    margin: 0 15px;
+  }
+  .price__container{
+    margin: 0 20px;
+    
+  }
+  .albums__container{
+    margin: 0 20px;
+  }
+  .block__album{
+    
+    flex-wrap: wrap;
+  }
+  .album__item{
+    width: clamp(12.5rem, -2.062rem + 48.54vw, 29.125rem)
+  }
+  .genres__container{
+    margin: 0 20px;
+  }
+  p{
+    font-size: clamp(0.7rem, 0.437rem + 0.876vw, 1rem)
+  }
+  .genres__item{
+    box-sizing: 76px;
+  }
+  .genres__items-buttons{
+    flex-wrap: wrap;
+  }
+  .album__item h2{
+    font-size: clamp(0.875rem, 0.328rem + 1.825vw, 1.5rem);
+  }
+}
+
+@media(max-width: 718px){
+  .album__item{
+    width: 100%;
+  }
+  .album__item h2{
+    font-size: clamp(1rem, 0.623rem + 2.74vw, 1.5rem)
+  }
+  
+}
+@media(max-width: 220px){
+  .album__item h2{
+    font-size: clamp(0.5rem, 0.5rem + 3.636vw, 1rem)
+  }
+}
