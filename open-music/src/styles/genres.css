@@ -24,12 +24,12 @@
 
 
 .genres__item:hover{
-  background-color: black;
-  color: white;
+  background-color: var(--gray-1);
+  color: var(--gray-8);
   transition: 0.3s ease;
 }
 
 .genres__select{
-  background-color: black;
-  color: white;
+  background-color: var(--gray-1);
+  color: var(--gray-1);
 }

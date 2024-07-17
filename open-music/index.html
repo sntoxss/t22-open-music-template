@@ -10,41 +10,43 @@
     <link rel="stylesheet" href="./src/styles/index.css">
     <link rel="stylesheet" href="./src/styles/price-range.css">
     <link rel="stylesheet" href="./src/styles/reset.css">
+    <script src="./src/scripts/theme.js" ></script>
+
     <title>Open Music</title>
   </head>
-  <body>
+  <body class="">
     <!-- CABEÇALHO -->
-    <header>
+    <header class="">
       <h1><span>o</span>pen <span>m</span>usic</h1>
-      <button><img src="./src/assets/icons/moon-icon.svg" alt="Foto de troca de estilo para noturno" id="buttonNight"></button>
+      <button id="buttonNight"><img src="./src/assets/icons/moon-icon.svg" alt="Foto de troca de estilo para noturno" id="buttonNightImg"></button>
     </header>
 
     <main>
       <section class="genres__container">
         <h2>Gênero Musical</h2>
         <div class="genres__items-buttons">
-          <button class="genres__item">
+          <button class="genres__item ">
             <p>Todos</p>
           </button>
-          <button class="genres__item">
+          <button class="genres__item ">
             <p>Pop</p>
           </button>
-          <button class="genres__item">
+          <button class="genres__item ">
             <p>MPB</p>
           </button>
-          <button class="genres__item">
+          <button class="genres__item ">
             <p>Forró</p>
           </button>
-          <button class="genres__item">
+          <button class="genres__item ">
             <p>Samba</p>
           </button>
-          <button class="genres__item">
+          <button class="genres__item ">
             <p>Baião</p>
           </button>
           <button class="genres__item ">
             <p>Rap</p>
           </button>
-          <button class="genres__item">
+          <button class="genres__item ">
             <p>Hip-Hop</p>
           </button>
         </div>
@@ -54,15 +56,15 @@
       <section class="price__container">
         <div>
           <h2 class="price-h2">Definir Preço</h2>
-          <h2 class="price-value">Até <span>R$100</span></h2>
+          <h2 class="price-value">Até <span id="selected-price">R$100</span></h2>
         </div>
-        <input id="selectorPrice__input" type="range" min="0" max="150" value="150" />
+        <input id="selectorPrice__input" type="range" min="0" max="150" value="150" id="selectorPrice__input"/>
       </section>
       <!-- SEÇÃO DE ALBUNS -->
       <section class="albums__container">
         <h2>Albuns Econtrados</h2>
-        <div class="block__album">
-          <div class="album__item album__one">
+        <div class="block__album ">
+          <div class="album__item album__one " 
             <img src="./src/assets/imgs/cover-1.jpg" alt="Foto do albuns dos Novos Baianos">
             <div class="titleAlbum"><h2>Acabou o Chorare</h2></div>
             <div class="album-banda">
@@ -76,7 +78,7 @@
               </div>
             </div>
           </div>
-          <div class="album__item album__two">
+          <div class="album__item album__two ">
             <img src="./src/assets/imgs/cover-2.jpg" alt="Foto do album Pink Floyd">
             <div class="titleAlbum"><h2>The Wall</h2></div>
             <div class="album-banda">
