@@ -56,13 +56,13 @@
           <h2 class="price-h2">Definir Preço</h2>
           <h2 class="price-value">Até <span>R$100</span></h2>
         </div>
-        <input type="range" id="selectorPrice__input">
+        <input id="selectorPrice__input" type="range" min="0" max="150" value="150" />
       </section>
       <!-- SEÇÃO DE ALBUNS -->
       <section class="albums__container">
         <h2>Albuns Econtrados</h2>
         <div class="block__album">
-          <div class="album__item album__novosBaianos1">
+          <div class="album__item album__one">
             <img src="./src/assets/imgs/cover-1.jpg" alt="Foto do albuns dos Novos Baianos">
             <div class="titleAlbum"><h2>Acabou o Chorare</h2></div>
             <div class="album-banda">
@@ -76,7 +76,7 @@
               </div>
             </div>
           </div>
-          <div class="album__item album__pinkFloyd1">
+          <div class="album__item album__two">
             <img src="./src/assets/imgs/cover-2.jpg" alt="Foto do album Pink Floyd">
             <div class="titleAlbum"><h2>The Wall</h2></div>
             <div class="album-banda">
@@ -90,12 +90,12 @@
               </div>
             </div>
           </div>
-          <div class="album__item album__kendrickLamar1">
+          <div class="album__item album__three">
             <img src="./src/assets/imgs/cover-3.png" alt="Foto album Kendrick Lamar">
             <div class="titleAlbum"><h2>To Pimp a Butterfly</h2></div>
             <div class="album-banda">
-              <p>Kendrick Lamar</p>
-              <p>Rap</p>
+              <p class="">Kendrick Lamar</p>
+              <p class="">Rap</p>
             </div>
             <div class="album-price">
               <div>
@@ -104,22 +104,22 @@
               </div>
             </div>
           </div>
-          <div class="album__item album__pinkFloyd2">
-            <img src="./src/assets/imgs/cover-2.jpg" alt="Foto album Pink Floyd">
+          <div class="album__item album__four">
+            <img src="./src/assets/imgs/cover-4.jpg" alt="Foto album Pink Floyd">
             <div class="titleAlbum"><h2>The Wall</h2></div>
             <div class="album-banda">
-              <p>Pink Floyd</p>
-              <p>Rock</p>
+              <p class="titleFour">Pink Floyd</p>
+              <p class="genresFour">Rock</p>
             </div>
             <div class="album-price">
               <div>
-                <p>R$ 123,56</p>
+                <p class="priceFour">R$ 123,56</p>
                 <button>Comprar</button>
               </div>
             </div>
           </div>
-          <div class="album__item album__novosBaianos2">
-            <img src="./src/assets/imgs/cover-1.jpg" alt="Foto album album Novos Baianos">
+          <div class="album__item album__five">
+            <img src="./src/assets/imgs/cover-5.jpg" alt="Foto album album Novos Baianos">
             <div class="titleAlbum"><h2>Acabou o Chorare</h2></div>
 
             <div class="album-banda">
@@ -128,29 +128,29 @@
             </div>
             <div class="album-price">
               <div>
-                <p>R$ 137,91</p>
+                <p class="priceFive">R$ 137,91</p>
                 <button>Comprar</button>
               </div>
             </div>
           </div>
-          <div class="album__item album__kendrickLamar2">
-            <img src="./src/assets/imgs/cover-3.png" alt="Foto album Kendrick Lamar">
+          <div class="album__item album__six">
+            <img src="./src/assets/imgs/cover-6.jpg" alt="Foto album Kendrick Lamar">
             <div class="titleAlbum"><h2>To Pimp a Butterfly</h2></div>
             <div class="album-banda">
-              <p>Kendrick Lamar</p>
-              <p>Rap</p>
+              <p class="titleSix">Kendrick Lamar</p>
+              <p class="genresSix">Rap</p>
             </div>
             <div class="album-price">
               <div>
-                <p>R$ 102,66</p>
+                <p class="priceSix">R$ 102,66</p>
                 <button>Comprar</button>
               </div>
             </div>
           </div>
         </div>
-
       </section>
     </main>
-    <script src="./src/scripts/index.js"></script>
+    <script src="./src/scripts/inputRange.js"></script>
+    <script src="./src/scripts/index.js" type="module"></script>
   </body>
 </html>

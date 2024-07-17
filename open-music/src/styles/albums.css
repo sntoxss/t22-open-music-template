@@ -22,7 +22,7 @@
 .album__item img{
   border-radius: 4px 4px 0 0;
   object-fit: cover;
-  height: 149px;
+  height: 290px;
 }
 .album__item{
   display: flex;
@@ -31,7 +31,6 @@
   justify-content: space-between;
   border-radius: 4px;
   width: clamp(18.438rem, 15.587rem + 5.702vw, 19.25rem);
-  height: 308px;
 }
 .titleAlbum{
   margin-top: 15px;
