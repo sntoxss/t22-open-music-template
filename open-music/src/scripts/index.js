@@ -1,5 +1,5 @@
 import { applyInputRangeStyle } from "./inputRange.js";
-import { albumList } from "./albumDatabase.js";
+import { fetchMusics } from "./api.js";
 
 const genresButton = document.querySelectorAll(".genres__item");
 
@@ -23,47 +23,59 @@ const selectedPriceElement = document.getElementById("selected-price");
 const priceInput = document.getElementById("selectorPrice__input");
 const albumsContainer = document.querySelector(".block__album");
 
+function debounce(func, delay) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), delay);
+  };
+}
 
-priceInput.addEventListener("input", (event) => {
-  const currentPrice = event.target.value;
-  selectedPriceElement.textContent = currentPrice;
-  filterAlbumsByPrice(currentPrice);
-});
+async function loadAlbums() {
+  const albums = await fetchMusics();
+  if (albums) {
+    return albums;
+  }
+  return [];
+}
 
-function filterAlbumsByPrice(maxPrice) {
-  
-  albumsContainer.innerHTML = "";
+async function updateAlbumsDisplay(price) {
+  albumsContainer.innerHTML = ""; 
 
-  
-  const filteredAlbums = albumList.filter(album => parseFloat(album.price) <= maxPrice);
+  const albumList = await loadAlbums();
+  const filteredAlbums = albumList.filter(album => parseFloat(album.price) <= price);
 
   filteredAlbums.forEach(album => {
-    const albumElement = createAlbumElement(album);
+    const albumElement = document.createElement("div");
+    albumElement.classList.add("album__item");
+
+    albumElement.innerHTML = `
+      <img src="${album.img}" alt="Foto do album ${album.title}">
+      <div class="titleAlbum">
+        <h2>${album.title}</h2>
+      </div>
+      <div class="album-banda">
+        <p>${album.band}</p>
+        <p>${album.genre}</p>
+      </div>
+      <div class="album-price">
+        <div>
+          <p>R$ ${album.price}</p>
+          <button>Comprar</button>
+        </div>
+      </div>
+    `;
+
     albumsContainer.appendChild(albumElement);
   });
 }
 
-function createAlbumElement(album) {
-  const albumItem = document.createElement("div");
-  albumItem.classList.add("album__item");
+const debouncedUpdate = debounce((event) => {
+  const currentPrice = event.target.value;
+  selectedPriceElement.textContent = currentPrice;
+  updateAlbumsDisplay(parseFloat(currentPrice));
+}, 300);
 
-  albumItem.innerHTML = `
-    <img src="${album.img}" alt="Foto do album ${album.band}">
-    <div class="titleAlbum"><h2>${album.title}</h2></div>
-    <div class="album-banda">
-      <p>${album.band}</p>
-      <p>${album.genre}</p>
-    </div>
-    <div class="album-price">
-      <div>
-        <p>R$ ${album.price}</p>
-        <button>Comprar</button>
-      </div>
-    </div>
-  `;
+priceInput.addEventListener("input", debouncedUpdate);
 
-  return albumItem;
-}
-
-
-filterAlbumsByPrice(priceInput.value);
+updateAlbumsDisplay(parseFloat(priceInput.value));

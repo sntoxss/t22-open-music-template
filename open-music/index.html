@@ -1,158 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/styles/albums.css">
-    <link rel="stylesheet" href="./src/styles/genres.css">
-    <link rel="stylesheet" href="./src/styles/globalStyles.css">
-    <link rel="stylesheet" href="./src/styles/header.css">
-    <link rel="stylesheet" href="./src/styles/index.css">
-    <link rel="stylesheet" href="./src/styles/price-range.css">
-    <link rel="stylesheet" href="./src/styles/reset.css">
-    <script src="./src/scripts/theme.js" ></script>
 
-    <title>Open Music</title>
-  </head>
-  <body class="">
-    <!-- CABEÇALHO -->
-    <header class="">
-      <h1><span>o</span>pen <span>m</span>usic</h1>
-      <button id="buttonNight"><img src="./src/assets/icons/moon-icon.svg" alt="Foto de troca de estilo para noturno" id="buttonNightImg"></button>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/styles/albums.css">
+  <link rel="stylesheet" href="./src/styles/genres.css">
+  <link rel="stylesheet" href="./src/styles/globalStyles.css">
+  <link rel="stylesheet" href="./src/styles/header.css">
+  <link rel="stylesheet" href="./src/styles/index.css">
+  <link rel="stylesheet" href="./src/styles/price-range.css">
+  <link rel="stylesheet" href="./src/styles/reset.css">
+  <script src="./src/scripts/theme.js"></script>
+  <script src="./src/scripts/api.js"></script>
+  <title>Open Music</title>
+</head>
 
-    <main>
-      <section class="genres__container">
-        <h2>Gênero Musical</h2>
-        <div class="genres__items-buttons">
-          <button class="genres__item ">
-            <p>Todos</p>
-          </button>
-          <button class="genres__item ">
-            <p>Pop</p>
-          </button>
-          <button class="genres__item ">
-            <p>MPB</p>
-          </button>
-          <button class="genres__item ">
-            <p>Forró</p>
-          </button>
-          <button class="genres__item ">
-            <p>Samba</p>
-          </button>
-          <button class="genres__item ">
-            <p>Baião</p>
-          </button>
-          <button class="genres__item ">
-            <p>Rap</p>
-          </button>
-          <button class="genres__item ">
-            <p>Hip-Hop</p>
-          </button>
-        </div>
-      </section>
+<body>
+  <header>
+    <h1><span>o</span>pen<span>m</span>usic</h1>
+    <button id="buttonNight">
+      <img src="./src/assets/icons/moon-icon.svg" alt="Foto de troca de estilo para noturno" id="buttonNightImg">
+    </button>
+  </header>
+  <main>
+    <section class="genres__container">
+      <h2>Gênero Musical</h2>
+      <div class="genres__items-buttons">
+        <button class="genres__item ">
+          <p>Todos</p>
+        </button>
+        <button class="genres__item ">
+          <p>Pop</p>
+        </button>
+        <button class="genres__item ">
+          <p>MPB</p>
+        </button>
+        <button class="genres__item ">
+          <p>Forró</p>
+        </button>
+        <button class="genres__item ">
+          <p>Samba</p>
+        </button>
+        <button class="genres__item ">
+          <p>Baião</p>
+        </button>
+        <button class="genres__item ">
+          <p>Rap</p>
+        </button>
+        <button class="genres__item ">
+          <p>Hip-Hop</p>
+        </button>
+      </div>
+    </section>
+    <section class="price__container">
+      <div>
+        <h2 class="price-h2">Definir Preço</h2>
+        <h2 class="price-value">Até <span>R$<span id="selected-price">150</span></span></h2>
+      </div>
+      <input id="selectorPrice__input" type="range" min="0" max="150" value="150" />
+    </section>
+    <section class="albums__container">
+      <h2>Albuns Econtrados</h2>
+      <div class="block__album">
+      </div>
 
-    
-      <section class="price__container">
-        <div>
-          <h2 class="price-h2">Definir Preço</h2>
-          <h2 class="price-value">Até <span id="selected-price">R$100</span></h2>
-        </div>
-        <input id="selectorPrice__input" type="range" min="0" max="150" value="150" id="selectorPrice__input"/>
-      </section>
-      <!-- SEÇÃO DE ALBUNS -->
-      <section class="albums__container">
-        <h2>Albuns Econtrados</h2>
-        <div class="block__album ">
-          <div class="album__item album__one " 
-            <img src="./src/assets/imgs/cover-1.jpg" alt="Foto do albuns dos Novos Baianos">
-            <div class="titleAlbum"><h2>Acabou o Chorare</h2></div>
-            <div class="album-banda">
-              <p>Novos Baianos</p>
-              <p>MPB</p>
-            </div>
-            <div class="album-price">
-              <div>
-                <p>R$ 137,91</p>
-                <button>Comprar</button>
-              </div>
-            </div>
-          </div>
-          <div class="album__item album__two ">
-            <img src="./src/assets/imgs/cover-2.jpg" alt="Foto do album Pink Floyd">
-            <div class="titleAlbum"><h2>The Wall</h2></div>
-            <div class="album-banda">
-              <p>Pink Floyd</p>
-              <p>Rock</p>
-            </div>
-            <div class="album-price">
-              <div>
-                <p>R$ 123,56</p>
-                <button>Comprar</button>
-              </div>
-            </div>
-          </div>
-          <div class="album__item album__three">
-            <img src="./src/assets/imgs/cover-3.png" alt="Foto album Kendrick Lamar">
-            <div class="titleAlbum"><h2>To Pimp a Butterfly</h2></div>
-            <div class="album-banda">
-              <p class="">Kendrick Lamar</p>
-              <p class="">Rap</p>
-            </div>
-            <div class="album-price">
-              <div>
-                <p>R$ 102,66</p>
-                <button>Comprar</button>
-              </div>
-            </div>
-          </div>
-          <div class="album__item album__four">
-            <img src="./src/assets/imgs/cover-4.jpg" alt="Foto album Pink Floyd">
-            <div class="titleAlbum"><h2>The Wall</h2></div>
-            <div class="album-banda">
-              <p class="titleFour">Pink Floyd</p>
-              <p class="genresFour">Rock</p>
-            </div>
-            <div class="album-price">
-              <div>
-                <p class="priceFour">R$ 123,56</p>
-                <button>Comprar</button>
-              </div>
-            </div>
-          </div>
-          <div class="album__item album__five">
-            <img src="./src/assets/imgs/cover-5.jpg" alt="Foto album album Novos Baianos">
-            <div class="titleAlbum"><h2>Acabou o Chorare</h2></div>
 
-            <div class="album-banda">
-              <p>Novos Baianos</p>
-              <p>MPB</p>
-            </div>
-            <div class="album-price">
-              <div>
-                <p class="priceFive">R$ 137,91</p>
-                <button>Comprar</button>
-              </div>
-            </div>
-          </div>
-          <div class="album__item album__six">
-            <img src="./src/assets/imgs/cover-6.jpg" alt="Foto album Kendrick Lamar">
-            <div class="titleAlbum"><h2>To Pimp a Butterfly</h2></div>
-            <div class="album-banda">
-              <p class="titleSix">Kendrick Lamar</p>
-              <p class="genresSix">Rap</p>
-            </div>
-            <div class="album-price">
-              <div>
-                <p class="priceSix">R$ 102,66</p>
-                <button>Comprar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <script src="./src/scripts/inputRange.js"></script>
-    <script src="./src/scripts/index.js" type="module"></script>
-  </body>
+
+    </section>
+  </main>
+  <script src="./src/scripts/inputRange.js"></script>
+  <script src="./src/scripts/index.js" type="module"></script>
+</body>
+
 </html>
